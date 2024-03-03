@@ -4,5 +4,10 @@ deploy:
   steps:
     terraformInit:
       after:
-        - name: check my cosssodess
-          run: echo my
+        - name: Command from step.run
+          run: |
+            echo Running command from step.run
+            echo Running another command from step.run
+            printf "Check failed" >> $ENV0_STEP_SUMMARY 
+            printf "### Summary\n\n" >> $ENV0_STEP_CONTENT
+            printf "- it's cool" >> $ENV0_STEP_CONTENT
