@@ -8,6 +8,6 @@ deploy:
           run: |
             echo Running command from step.run
             echo Running another command from step.run
-            printf "\x1b[32mCheck failed\x1b[0m" >> $ENV0_STEP_SUMMARY 
+            printf "\x1b[31mCheck failed\x1b[0m  \x1b[32m+10\x1b[0m \x1b[33m-2\x1b[0m" >> $ENV0_STEP_SUMMARY 
             printf "### Summary\n\n" >> $ENV0_STEP_CONTENT
             printf "- it's cool" >> $ENV0_STEP_CONTENT
