@@ -4,7 +4,7 @@ deploy:
   steps:
     terraformInit:
       after:
-        - name: Command from step.run
+        - name: My Step
           run: |
             echo Running command from step.run
             echo Running another command from step.run
