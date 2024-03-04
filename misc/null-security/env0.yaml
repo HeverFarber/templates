@@ -4,7 +4,7 @@ deploy:
     terraformPlan:
       before:
         - name: TFSec
-          use: https://github.com/env0/env0-tfsec-plugin?ref=feat-add-pretty-result
+          use: https://github.com/env0/env0-tfsec-plugin@feat-add-pretty-result
           inputs:
             version: v1.28.5
             directory: .
