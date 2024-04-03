@@ -6,4 +6,3 @@ variable "counter" {
 resource "null_resource" "null" {
   count = var.counter
 }
-d
