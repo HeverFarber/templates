@@ -13,4 +13,4 @@ environments:
   null-resource-1-2-4:
     name: null-resource-1-2-4
     templateName: GitHub Hever
-    needs: [null-resource-1-3]
+    needs: [null-resource-1-2-3]
