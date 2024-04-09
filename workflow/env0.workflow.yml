@@ -1,9 +1,6 @@
 environments:
-  null-resource-1:
-    name: null-resource-1
-    templateName: GitHub Hever
-  null-resource-2:
-    name: null-resource-2
+  OT:
+    name: OT
     templateName: GitHub Hever
   HM:
     name: HM
