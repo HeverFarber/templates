@@ -5,3 +5,21 @@ environments:
   null-resource-2:
     name: null-resource-2
     templateName: GitHub Hever
+  HM:
+    name: HM
+    templateName: HM
+  K8S:
+    name: K8S
+    templateName: K8S
+  PL:
+    name: PL
+    templateName: PL
+  CF:
+    name: CF
+    templateName: CF
+  TG:
+    name: TG
+    templateName: TG
+  TF:
+    name: TF
+    templateName: TF
