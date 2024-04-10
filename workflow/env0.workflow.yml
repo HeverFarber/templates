@@ -2,6 +2,10 @@ environments:
   OT:
     name: OT
     templateName: GitHub Hever
+  OT2:
+    name: OT
+    templateName: GitHub Hever
+    needs: [OT]
   HM:
     name: HM
     templateName: HM
