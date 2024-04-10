@@ -5,4 +5,4 @@ environments:
   OT2:
     name: OT
     templateName: GitHub Hever
-    needs: [OT1]
+    needs: [OT]
