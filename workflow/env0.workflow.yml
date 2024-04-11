@@ -9,4 +9,4 @@ environments:
   OT4:
     name: OT4
     templateName: GitHub Hever
-    needs: [OT]
+    needs: [OT1]
