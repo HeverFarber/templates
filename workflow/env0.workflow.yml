@@ -10,3 +10,7 @@ environments:
     name: OT 4
     templateName: GitHub Hever
     needs: [OT]
+  TG:
+    name: tg
+    templateName: Terragrunt - HEVER - NEW
+    needs: [OT]
