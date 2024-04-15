@@ -12,5 +12,5 @@ environments:
     needs: [OT]
   TG:
     name: tg
-    templateName: Terragrunt - HEVER - NEW
+    templateName: Terragrunt run-all dependencies
     needs: [OT]
