@@ -1,7 +1,7 @@
 environments:
   OT:
     name: OT
-    templateName: GitHub Hever
+    ftemplateName: GitHub Hever
   OT2:
     name: OT 2
     templateName: GitHub Hever
