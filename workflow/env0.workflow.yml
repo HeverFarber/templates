@@ -17,7 +17,7 @@ environments:
   OT6:
     name: OT 6
     templateName: GitHub Hever
-    needs: [OT]
+    needs: [OT22]
   TG:
     name: tg
     templateName: Terragrunt run-all dependencies
