@@ -18,6 +18,10 @@ environments:
     name: OT 6
     templateName: GitHub Hever
     needs: [OT]
+  helm:
+    name: helm
+    templateName: amit-helm-dummy
+    needs: [OT]
   TG:
     name: tg
     templateName: Terragrunt run-all dependencies
