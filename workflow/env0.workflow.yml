@@ -21,7 +21,7 @@ environments:
   helm:
     name: helm
     templateName: amit-helm-dummy
-    needs: [OT1]
+    needs: [OT]
   TG:
     name: tg
     templateName: Terragrunt run-all dependencies
