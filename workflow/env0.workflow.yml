@@ -6,18 +6,6 @@ environments:
     name: OT 2
     templateName: GitHub Hever
     needs: [OT]
-  OT4:
-    name: OT 4
-    templateName: GitHub Hever
-    needs: [OT7]
-  OT5:
-    name: OT 5
-    templateName: GitHub Hever
-    needs: [OT]
-  OT6:
-    name: OT 6
-    templateName: GitHub Hever
-    needs: [OT]
   helm:
     name: helm
     templateName: amit-helm-dummy
