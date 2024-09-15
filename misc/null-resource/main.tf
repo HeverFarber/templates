@@ -8,7 +8,7 @@ resource "null_resource" "null" {
 }
 
 output "token_value" {
- value = "secret99"
+ value = "secret1"
  sensitive = true
 }
 
