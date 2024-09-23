@@ -2,15 +2,3 @@ environments:
   OT:
     name: OT
     templateName: GitHub Hever
-  OT2:
-    name: OT 2
-    templateName: GitHub Hever
-    needs: [OT]
-  helm:
-    name: helm
-    templateName: amit-helm-dummy
-    needs: [OT]
-  TG:
-    name: tg
-    templateName: Terragrunt run-all dependencies
-    needs: [OT]
