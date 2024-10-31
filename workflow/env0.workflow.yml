@@ -1,4 +1,7 @@
 environments:
-  OT:
-    name: OT
+  env1:
+    name: Env 1
+    templateName: GitHub Hever
+  env2:
+    name: Env 2
     templateName: GitHub Hever
