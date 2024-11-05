@@ -27,7 +27,7 @@ generate "output" {
   if_exists = "overwrite_terragrunt"
   contents = <<EOF
 output "my_value" {
-  value = "value"
+  value = "hever"
 }
 EOF
 }
