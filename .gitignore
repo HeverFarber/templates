@@ -1,0 +1,26 @@
+### IDE
+# Jetbrains
+.idea/
+
+### macOS template
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+.terraform
+*.tfstate
+*.tfstate.backup
+
+test
+.terraform.lock.hcl
+env0.auto.tfvars.json
+.terragrunt-cache
+.tf-plan
+terragrunt/dependencies/**/variables.tf
+terragrunt/dependencies/**/output.tf
+terragrunt/dependencies/**/module*.tf
+terragrunt-debug.tfvars.json

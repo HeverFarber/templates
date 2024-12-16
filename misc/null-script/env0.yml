@@ -1,0 +1,12 @@
+version: 1
+
+deploy:
+  steps:
+    terraformInit:
+      before:
+        - pip install --user j2cli
+        - whoami
+        - id node
+    terraformOutput:
+      after:
+        - printenv

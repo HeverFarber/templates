@@ -1,0 +1,8 @@
+version: 2
+
+deploy:
+  steps:
+    terraformInit:
+      after:
+        - name: check my cosssssodess
+          run: echo my
