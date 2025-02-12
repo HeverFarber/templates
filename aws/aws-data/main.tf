@@ -1,26 +1,27 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-  }
+provider "aws" {
+  region  = "us-east-2"
 }
 
 provider "aws" {
+  alias = "hever-2"
   region  = "us-east-1"
 }
 
-data "aws_secretsmanager_secret" "secret" {
+
+/*data "aws_secretsmanager_secret" "secret" {
   name = var.secret_name
+}*/
+
+data "aws_caller_identity" "current" {}
+
+data "aws_region" "west" {
+  name = "eu-west-1"
 }
 
-resource "null_resource" "null" {
-  triggers = {
-    cluster_instance_ids = join(",", keys(data.aws_secretsmanager_secret.secret.tags))
-  }
+data "aws_region" "hever" {
+    provider = aws.hever-2
 }
 
 variable "secret_name" {
-
+  default = "secret-ref"
 }
