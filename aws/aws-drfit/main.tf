@@ -1,3 +1,5 @@
+
+# updated by env0 cloud to code
 resource "aws_iam_policy" "policy" {
   name        = "drfit_test_policy"
   path        = "/"
