@@ -36,3 +36,7 @@ resource "aws_iam_policy" "policy_2" {
     ]
   })
 }
+
+module my_module {
+  source = "./module"
+}
