@@ -1,18 +1,3 @@
-locals {
-  policy_stetment = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = [
-          "ec2:ABCDE",
-        ]
-        Effect   = "Allow"
-        Resource = "*"
-      },
-    ]
-  })
-}
-
 
 resource "aws_iam_policy" "policy_1" {
   name        = "hever_policy_1"
