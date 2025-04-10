@@ -1,3 +1,5 @@
+
+# updated by env0 cloud to code
 resource "aws_iam_policy" "policy" {
   name        = "drfit_test_policy"
   path        = "/"
@@ -8,7 +10,7 @@ resource "aws_iam_policy" "policy" {
     Statement = [
       {
         Action = [
-          "ec2:DescribeAAA*",
+          "ec2:DrDrDr*",
         ]
         Effect   = "Allow"
         Resource = "*"
