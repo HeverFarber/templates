@@ -22,5 +22,5 @@ resource "aws_iam_policy" "policy_2" {
   path        = "/"
   description = "My test policy"
 
-  policy = local.policy_statement
+  policy = "{\"Statement\":[{\"Action\":[\"ec2:ABCDE1111iii\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}"
 }
