@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "policy_1" {
-  name        = "hever_module_policy_1"
+  name        = "hever_external_internal_module_policy_1"
   path        = "/"
   description = "My test policy"
 
@@ -15,12 +15,4 @@ resource "aws_iam_policy" "policy_1" {
       },
     ]
   })
-}
-
-resource "aws_iam_policy" "policy_2" {
-  name        = "hever_module_policy_2"
-  path        = "/"
-  description = "My test policy"
-
-  policy = local.policy_statement
 }

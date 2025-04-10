@@ -1,5 +1,5 @@
 locals {
-  policy_stetment = jsonencode({
+  policy_statement = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {

@@ -1,5 +1,5 @@
 locals {
-  policy_stetment = jsonencode({
+  policy_statement = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {
@@ -38,5 +38,5 @@ resource "aws_iam_policy" "policy_4" {
   path        = "/"
   description = "My test policy"
 
-  policy = local.policy_stetment
+  policy = local.policy_statement
 }

@@ -32,10 +32,16 @@ resource "aws_iam_policy" "policy_2" {
   path        = "/"
   description = "My test policy"
 
-  policy = local.policy_stetment
+  policy = local.policy_statement
 }
 
 
 module my_module {
   source = "./module"
+}
+
+module external_module {
+  source = "github.com/HeverFarber/templates//aws/aws-drift/external_module"
+
+  policy_statement = local.policy_statement
 }
