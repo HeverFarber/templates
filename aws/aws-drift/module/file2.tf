@@ -38,5 +38,5 @@ resource "aws_iam_policy" "policy_4" {
   path        = "/"
   description = "My test policy"
 
-  policy = local.policy_stetment
+  policy = local.policy_statement
 }
