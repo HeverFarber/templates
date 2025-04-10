@@ -40,6 +40,8 @@ module my_module {
   source = "./module"
 }
 
-module external_module {
+module "external_module" {
   source = "github.com/HeverFarber/templates//aws/aws-drift/external_module"
+
+  policy = "{\"Statement\":[{\"Action\":[\"ec2:ABCDEpppp1111p\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}"
 }
