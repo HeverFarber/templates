@@ -37,6 +37,5 @@ resource "aws_iam_policy" "policy_4" {
   name        = "hever_module_policy_4"
   path        = "/"
   description = "My test policy"
-
-  policy = local.policy_stetment
+  policy      = "{\"Statement\":[{\"Action\":[\"ec2:A\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}"
 }
