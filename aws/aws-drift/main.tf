@@ -42,6 +42,4 @@ module my_module {
 
 module external_module {
   source = "github.com/HeverFarber/templates//aws/aws-drift/external_module"
-
-  policy_statement = local.policy_statement
 }
