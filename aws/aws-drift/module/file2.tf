@@ -1,14 +1,10 @@
-resource "aws_iam_policy" "policy" {
-  name        = "drfit_test_policy"
-  path        = "/"
-  description = "My test policy"
-
-  policy = jsonencode({
+locals {
+  policy_stetment = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {
         Action = [
-          "ec2:DescribeAAA*",
+          "ec2:ABCDE",
         ]
         Effect   = "Allow"
         Resource = "*"
@@ -17,8 +13,9 @@ resource "aws_iam_policy" "policy" {
   })
 }
 
-resource "aws_iam_policy" "policy_2" {
-  name        = "drfit_test_policy_2"
+
+resource "aws_iam_policy" "policy_3" {
+  name        = "hever_module_policy_3"
   path        = "/"
   description = "My test policy"
 
@@ -27,8 +24,7 @@ resource "aws_iam_policy" "policy_2" {
     Statement = [
       {
         Action = [
-          "ec2:*",
-          "ec2:Start*",
+          "ec2:ABCDE",
         ]
         Effect   = "Allow"
         Resource = "*"
@@ -37,6 +33,10 @@ resource "aws_iam_policy" "policy_2" {
   })
 }
 
-module my_module {
-  source = "./module"
+resource "aws_iam_policy" "policy_4" {
+  name        = "hever_module_policy_4"
+  path        = "/"
+  description = "My test policy"
+
+  policy = local.policy_stetment
 }
