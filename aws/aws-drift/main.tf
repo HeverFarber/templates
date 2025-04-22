@@ -18,10 +18,10 @@ resource "aws_iam_policy" "policy_1" {
     Statement = [
       {
         Action = [
-          "ec2:ABCDE",
+          "s3:PutObject",
         ]
         Effect   = "Allow"
-        Resource = "*"
+        Resource = "arn:aws:s3:::your-bucket-name/*"
       },
     ]
   })
