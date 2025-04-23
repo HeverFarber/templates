@@ -8,6 +8,15 @@ terraform {
 }
 resource "null_resource" "my" {}
 
+resource "aws_secretsmanager_secret" "GITHUB_BOT_APP_SECRET" {
+  name = "hever-test"
+}
+
+resource "aws_secretsmanager_secret_version" "GITHUB_BOT_APP_SECRET" {
+  secret_id     = aws_secretsmanager_secret.GITHUB_BOT_APP_SECRET.id
+  secret_string = "hever-test-secret"
+}
+
 resource "aws_iam_policy" "policy_1" {
   name        = "hever_policy_1"
   path        = "/"
