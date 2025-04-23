@@ -10,6 +10,14 @@ resource "null_resource" "my" {}
 
 resource "aws_secretsmanager_secret" "GITHUB_BOT_APP_SECRET" {
   name = "hever-test"
+  
+  tags = {
+    myTag = "1111"
+  }
+
+  tags_all = {
+    myTag = "1111"
+  }
 }
 
 resource "aws_secretsmanager_secret_version" "GITHUB_BOT_APP_SECRET" {
