@@ -10,10 +10,13 @@ resource "null_resource" "my" {}
 
 resource "aws_secretsmanager_secret" "GITHUB_BOT_APP_SECRET" {
   name = "hever-test"
+  policy = "{\"Statement\":[{\"Action\":\"secretsmanager:GetSecretValue\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::326535729404:root\"},\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}"
   tags = {
+    NewTag = "9999"
     myTag = "1111"
   }
   tags_all = {
+    NewTag = "9999"
     myTag = "1111"
   }
 }
@@ -33,7 +36,7 @@ resource "aws_iam_policy" "policy_1" {
     Statement = [
       {
         Action = [
-          "ec2:ABCDE",
+          "ec2:ABCDENewNewn dsdfewdsfd",
         ]
         Effect   = "Allow"
         Resource = "*"
