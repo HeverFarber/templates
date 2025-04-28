@@ -8,6 +8,27 @@ terraform {
 }
 resource "null_resource" "my" {}
 
+<<<<<<< HEAD
+=======
+resource "aws_secretsmanager_secret" "GITHUB_BOT_APP_SECRET" {
+  name = "hever-test"
+  policy = "{\"Statement\":[{\"Action\":\"secretsmanager:GetSecretValue\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::326535729404:root\"},\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}"
+  tags = {
+    NewTag = "9999"
+    myTag = "1111"
+  }
+  tags_all = {
+    NewTag = "9999"
+    myTag = "1111"
+  }
+}
+
+resource "aws_secretsmanager_secret_version" "GITHUB_BOT_APP_SECRET" {
+  secret_id     = aws_secretsmanager_secret.GITHUB_BOT_APP_SECRET.id
+  secret_string = "hever-test-secret"
+}
+
+>>>>>>> origin/master
 resource "aws_iam_policy" "policy_1" {
   name        = "hever_policy_1"
   path        = "/"
@@ -18,7 +39,7 @@ resource "aws_iam_policy" "policy_1" {
     Statement = [
       {
         Action = [
-          "ec2:ABCDE",
+          "ec2:ABCDENewNewn dsdfewdsfd",
         ]
         Effect   = "Allow"
         Resource = "*"
