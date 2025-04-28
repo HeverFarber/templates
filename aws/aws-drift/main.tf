@@ -36,7 +36,7 @@ resource "aws_iam_policy" "policy_1" {
     Statement = [
       {
         Action = [
-          "ec2:ABCDENewNewn dsdfewdsfd",
+          "ec2:ABCDENewNewn dddd",
         ]
         Effect   = "Allow"
         Resource = "*"
