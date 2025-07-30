@@ -38,5 +38,5 @@ module "my_module_for" {
 }
 
 output "my_output" {
-  value = "hever3"
+  value = "hever4"
 }
