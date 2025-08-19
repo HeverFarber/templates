@@ -24,6 +24,7 @@ curl --version
 
 # other
 aws --version
+awsv2 --version
 gcloud --version
 az --version
 kubectl version --client
