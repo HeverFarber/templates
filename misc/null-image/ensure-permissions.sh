@@ -29,9 +29,7 @@ gcloud --version
 az --version
 kubectl version --client
 tfenv --version
-terraform --version
 tgenv --version
-terratag --help
 pwsh -v
 infracost --version
 helm version
