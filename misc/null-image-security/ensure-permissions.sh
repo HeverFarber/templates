@@ -48,5 +48,5 @@ helm show chart env0/env0-agent
 pip install --break-system-packages --user ansible
 ansible --version
 
-sudo npm install -g @env0/cli
+npm install -g @env0/cli
 env0 help
