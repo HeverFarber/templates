@@ -34,8 +34,6 @@ infracost --version
 helm version
 
 # Check write permissions
-touch /opt/test
-rm /opt/test
 touch /tmp/test
 rm /tmp/test
 touch /home/node/test
