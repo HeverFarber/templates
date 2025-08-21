@@ -1,0 +1,18 @@
+# apiVersion specifies the Kubernetes API version to use. For Secrets, it's v1.
+apiVersion: v1
+# kind specifies the type of Kubernetes object to create. In this case, it's a Secret.
+kind: Secret
+# metadata contains data that helps uniquely identify the object, including a name.
+metadata:
+  name: my-secret
+# type specifies the type of the secret. 'Opaque' is the default and is used for arbitrary key-value pairs.
+type: Opaque
+# data contains the confidential data. Each key is a string, and each value is a base64-encoded string.
+data:
+  # The key is 'username'. The value 'admin' is encoded as 'YWRtaW4='.
+  # You can encode your own values using: echo -n 'your-username' | base64
+  username: YWRtaW4=
+  
+  # The key is 'password'. The value 'supersecret' is encoded as 'c3VwZXJzZWNyZXQ='.
+  # You can encode your own values using: echo -n 'your-password' | base64
+  password: c3VwZXJzZWNyZXQ=
