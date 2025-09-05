@@ -4,27 +4,28 @@ provider "aws" {
 
 # 1. S3 Bucket with 30-day TTL (Lifecycle Rule)
 resource "aws_s3_bucket" "data_bucket" {
-  bucket = "my-app-env0-data-bucket-unique-name" # Choose a globally unique bucket name
+  bucket = "my-app-env0-data-bucket-unique-name"
 
   lifecycle_rule {
     id      = "log"
     enabled = true
 
     expiration {
-      days = 30
+      days = 90
     }
 
-    # You can also add prefixes if you only want the rule to apply to certain objects
-    # prefix = "logs/"
+    noncurrent_version_expiration {
+      days = 12
+    }
 
-    # It's good practice to also manage incomplete multipart uploads
-    abort_incomplete_multipart_upload_days = 7
+    abort_incomplete_multipart_upload_days = 10
   }
 
   tags = {
     Name        = "My App Data Bucket"
     Environment = "Development"
     TTL         = "30 days"
+    SLA         = "high"
   }
 }
 
@@ -34,16 +35,15 @@ resource "aws_iam_user" "s3_reader_user" {
   path = "/system/"
 
   tags = {
-    Description = "IAM user with read-only access to a specific S3 bucket"
+    Description = "IAM user with read-only access to a specific S3 bucket And RDS"
   }
 }
 
 resource "aws_iam_policy" "s3_read_only_policy" {
-  name        = "S3ReadOnlyAccessPolicy-${aws_s3_bucket.data_bucket.id}"
+  name        = "S3ReadOnlyAccessPolicy-my-app-env0-data-bucket-unique-name"
   path        = "/"
-  description = "Policy to grant read-only access to ${aws_s3_bucket.data_bucket.id}"
+  description = "Policy to grant read-only access to my-app-env0-data-bucket-unique-name"
 
-  # Define the policy directly as a JSON string
   policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
@@ -54,17 +54,18 @@ resource "aws_iam_policy" "s3_read_only_policy" {
           "s3:ListBucket"
         ],
         Resource = [
-          aws_s3_bucket.data_bucket.arn
+          "arn:aws:s3:::my-app-env0-data-bucket-unique-name"
         ]
       },
       {
         Sid    = "AllowGetObject",
         Effect = "Allow",
         Action = [
-          "s3:GetObject"
+          "s3:GetObject",
+          "s3:PutObject"
         ],
         Resource = [
-          "${aws_s3_bucket.data_bucket.arn}/*" # Note the /* for objects within the bucket
+          "arn:aws:s3:::my-app-env0-data-bucket-unique-name/*"
         ]
       }
     ]
