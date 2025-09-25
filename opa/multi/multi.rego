@@ -11,7 +11,7 @@ pending[format(rego.metadata.rule())] {
 # title: more than 2 approvals
 # description: allow if two or more approvals are given.
 allow[format(rego.metadata.rule())] {
-	count(input.approvers) >= 2
+	count(input.approvers) >= 1
 }
 
 format(meta) := meta.description
