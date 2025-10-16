@@ -18,7 +18,7 @@ variable "counter" {
   default = 2
 }
 
-resource "null_resource" "null_counter" {
+resource "null_resource" "null_counter2" {
   count = var.counter
 }
 
