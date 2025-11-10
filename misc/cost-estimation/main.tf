@@ -23,6 +23,11 @@ resource "aws_instance" "web_app" {
   ami           = "ami-041ba027e6cfd5da6"
   instance_type = var.instance_type
 
+  metadata_options {
+    http_endpoint = "enabled"
+    http_tokens   = "required"
+  }
+
   root_block_device {
     volume_size = 50
   }
