@@ -15,7 +15,7 @@ provider "null" {
 
 variable "counter" {
   type = number
-  default = 6
+  default = 4
 }
 
 resource "null_resource" "null_counter" {
