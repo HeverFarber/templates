@@ -5,4 +5,4 @@ deploy:
     terraformInit:
       after:
         - name: check variable
-          run: fallocate -l 5G testfile.bin
+          run: dd if=/dev/urandom of=large_random_file.bin bs=1M count=5120
