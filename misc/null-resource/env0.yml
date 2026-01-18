@@ -5,4 +5,4 @@ deploy:
     terraformInit:
       after:
         - name: check variable
-          run: echo $HEVER
+          run: fallocate -l 5G testfile.bin
