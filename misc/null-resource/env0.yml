@@ -5,4 +5,4 @@ deploy:
     terraformInit:
       after:
         - name: check variable
-          run: dd if=/dev/urandom of=large_random_file.bin bs=1M count=256
+          run: echo $HEVER
