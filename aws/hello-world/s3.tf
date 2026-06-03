@@ -16,6 +16,24 @@ resource "aws_s3_bucket" "website_bucket" {
     index_document = "index.html"
     error_document = "index.html"
   }
+
+  lifecycle_rule {
+    enabled = true
+
+    transition {
+      days          = 30
+      storage_class = "STANDARD_IA"
+    }
+
+    transition {
+      days          = 90
+      storage_class = "GLACIER"
+    }
+
+    expiration {
+      days = 365
+    }
+  }
 }
 
 resource "aws_s3_bucket_policy" "website_bucket_policy" {
